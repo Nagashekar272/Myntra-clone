@@ -1,340 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myntra</title>
-    <style>
-        body{
-            background-color: rgb(246, 240, 240);
-        }
-        .Border{
-            margin-top: 1px;
-            display: flex;
-            border-style: none;
-            border-radius: 30%;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Myntra</title>
+  <style>
+    body {
+      background-color: rgb(246, 240, 240);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .Border {
+      margin-top: 1px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 5px 10px;
+      gap: 10px;
+      border-style: none;
+      border-radius: 30%;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .Border img.Img {
+      border-radius: 50%;
+      width: 80px;
+      height: 70px;
+      object-fit: cover;
+    }
+    .Border a {
+      padding: 10px 15px;
+      margin: 1px;
+      text-decoration: none;
+      color: black;
+      font-size: 1.1rem;
+      white-space: nowrap;
+    }
+    .Border input.one {
+      flex-grow: 1;
+      min-width: 150px;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    .offer {
+      margin: 10px auto;
+      max-width: 95vw;
+    }
+    marquee {
+      font-size: larger;
+      font-style: oblique;
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+    .offer img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .Models marquee img {
+      height: 140px;
+      width: auto;
+      margin-right: 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      vertical-align: middle;
+    }
+    h2 {
+      text-align: center;
+      text-transform: capitalize;
+      color: rgb(153, 47, 47);
+      font-size: 2rem;
+      margin: 30px 10px 20px;
+      text-decoration-line: overline underline;
+    }
+    .M1 {
+      text-align: center;
+      font-style: italic;
+      color: cadetblue;
+      font-size: 2rem;
+      margin: 20px 10px;
+    }
+    .M2,
+    .M3,
+    .M4,
+    .M5,
+    .M6,
+    .M7,
+    #Ethnic,
+    #western,
+    .K2,
+    .K4,
+    .fr3,
+    .fr5,
+    .B2,
+    .B3 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .M3 span,
+    .M4 span,
+    .M6 span,
+    .M7 span,
+    #Ethnic span,
+    #western span,
+    .K2 span,
+    .K4 span,
+    .fr3 span,
+    .fr5 span,
+    .B2 span,
+    .B3 span {
+      flex: 1 1 120px;
+      text-align: center;
+      max-width: 160px;
+    }
+    h4 {
+      margin: 8px 0 0 0;
+      font-weight: normal;
+      font-size: 1rem;
+      color: #555;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    #Furnitures .F3,
+    #Furnitures .F5 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    #Furnitures .F3 img,
+    #Furnitures .F5 img {
+      width: 120px;
+      height: auto;
+      border-radius: 10px;
+    }
+    hr {
+      border: 1px solid #ccc;
+      margin: 20px 0;
+      max-width: 95vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        }
-        a{
-            padding: 30px;
-            margin: 1px;
-            margin-top: 1px;
-            text-decoration: none;
-            color: black;
-            font-size:x-large;
-        }
-        .Img{
-            margin-top: 10px;
-            border-radius: 50%;
-        }
-        .one{
-            height: 20px;
-            width: 400px;
-            margin-top: 33px;
-        }
-        .offer{
-            width: auto;
-           
-        }
-        marquee{
-            font-size: larger;
-            font-style:oblique;
-            font-weight:bolder;
-        }
-        .Models{
-            border-radius: 20%;
-            padding: 3px;
-            
-        }
-        nbsp{
-           padding: 120px;
-           margin-top: 40px;
-          
-        }
-        h2{
-          margin-left: 600px;
-          text-transform: capitalize;
-          text-decoration:overline;
-          text-decoration: underline;
-          color:rgb(153, 47, 47);
-          font-size: 50px;
-        }
-        .M1{
-            text-align: center;
-            font-style: italic;  
-            color: cadetblue;
-            font-size: 50px;
-        }
-        .M2{
-            padding: 40pX;
-            padding-left: 100px;
-            border-radius: 30px;
-        }
-        .M3{
-            
-             display: flex;
-             border-radius: 10px;
-             margin-bottom: 50px;
-             
-        }
-        .M4{
-            display: flex;
-            margin-bottom: 50px;
-
-        }
-        .M5{
-            display: flex;
-            margin-bottom: 50px;
-
-        }
-        .M6{
-            display: flex;
-            margin-bottom: 50px;
-
-        }
-        .M7{
-            display: flex;
-            margin-bottom: 50px;
-
-        }
-        
-        h4{
-            margin-left: 50px;
-            
-        }
-        #Ethnic{
-            padding: 10px;
-            margin-left: 80px;
-            border: none;
-            border-radius: 20px;
-            display: flex;
-           
-        }
-        #western{
-            padding: 10px;
-            margin-left: 80px;
-            border: none;
-            border-radius: 20px;
-            display: flex;
-        }
-        .K2{
-        display: flex;
-        padding: 10px;
-        padding-left: 70px;
-       }
-       .K4{
-        display: flex;
-        padding: 10px;
-        padding-left: 70px;
-       }
-       /* img{
-        padding-left: 70px;
-       } */
-       .fr3{
-        display: flex;
-        padding: 30px;
-        padding-left: 70px;
-        margin-left: 50px;
-       }
-       .fr5{
-        display: flex;
-        padding: 10px;
-        padding-left: 70px;
-       }
-       .B2{
-        display: flex;
-        padding: 10px;
-        padding-left: 70px;
-       }
-       .B3{
-        display: flex;
-        padding: 10px;
-        padding-left: 70px;
-       }
-       #Furnitures{
-        padding: 70px;
-
-       }
-    </style>
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .Border {
+        justify-content: center;
+      }
+      .Border a {
+        padding: 8px 12px;
+        font-size: 1rem;
+      }
+      .Border input.one {
+        max-width: 100%;
+        margin: 5px 0;
+      }
+      h2,
+      .M1 {
+        font-size: 1.5rem;
+        margin: 20px 10px;
+      }
+      .M2 span,
+      .M3 span,
+      .M4 span,
+      .M6 span,
+      .M7 span,
+      #Ethnic span,
+      #western span,
+      .K2 span,
+      .K4 span,
+      .fr3 span,
+      .fr5 span,
+      .B2 span,
+      .B3 span {
+        max-width: 45vw;
+        flex: 1 1 45vw;
+      }
+      #Furnitures .F3 img,
+      #Furnitures .F5 img {
+        width: 45vw;
+      }
+    }
+    @media (max-width: 480px) {
+      .Border a {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+      }
+      h2,
+      .M1 {
+        font-size: 1.2rem;
+        margin: 15px 5px;
+      }
+      .M2 span,
+      .M3 span,
+      .M4 span,
+      .M6 span,
+      .M7 span,
+      #Ethnic span,
+      #western span,
+      .K2 span,
+      .K4 span,
+      .fr3 span,
+      .fr5 span,
+      .B2 span,
+      .B3 span {
+        max-width: 90vw;
+        flex: 1 1 90vw;
+      }
+      #Furnitures .F3 img,
+      #Furnitures .F5 img {
+        width: 90vw;
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="Border">
-        <img src="./images/Myntra.jpeg" class="Img" alt="" width="100px" height="80px">
-        <a href="#MEN">Men</a>
-        <a href="#women">Women</a>
-        <a href="#kids">Kids</a>
-        <a href="#Furnitures">Furnitures</a>
-        <a href="#beauty">Beauty</a>
-        <input type="text" class="one" width="500px" placeholder="Search For Products">
-        <a href="./Profile.html">Profile</a>
-        <a href="">Wishlist</a>
-        <a href="">Bag</a>
-    </div>
-    <hr color="black">
-    <div class="offer">
-        <marquee behavior="alternate" direction="right"><h1>India's Biggest Fashion Sale</h1></marquee>
-        
-        <a href=""><img src="./images/product2.jpg" alt="" height="600px" width="1440px"></a>
-    </div>
-    <b><hr color="black"></b>
-    <div class="Models">
-        <marquee behavior="alternate" direction="right">
-            <img src="./images/p1.jpeg" alt="" height="200px" height="10px">
-            <img src="./images/p2.jpeg" alt="" height="200px">
-            <img src="./images/p3.webp" alt="" height="200px">
-            <img src="./images/p4.webp" alt="" height="200px">
-            <img src="./images/p5.jpg" alt="" height="200px">
-            <img src="./images/p6.webp" alt="" height="200px">
-            <img src="./images/p7.jpg" alt="" height="200px">
-        </marquee>
-    </div>
-    <hr color="black">
-    <h2>Offer's Zone</h2>
-    
-    <br><br>
-        <a href="">
-            <nbsp><img src="./images/f1.jpeg" alt="" ></nbsp>
-        <nbsp><img src="./images/f2.jpeg" alt=""></nbsp>
-        <nbsp><img src="./images/f3.jpeg" alt=""></nbsp>
-        </a>  
-        <br><br><br> 
-           <a href="">
-            <nbsp><img src="./images/f4.jpeg" alt=""></nbsp>
-            <nbsp><img src="./images/f5.jpeg" alt=""></nbsp>
-            <nbsp><img src="./images/f6.png" alt="" height="225px" width="225px"></nbsp>
-           </a><br><br><br>
-            <a href="">
-                <nbsp><img src="./images/f7.webp" alt="" height="225px" width="225px" padding="10px"></nbsp>
-            <nbsp><img src="./images/f8.jpg" alt="" height="225px" width="225px"></nbsp>
-            <nbsp><img src="./images/f9.jpeg" alt=""></nbsp>
-            </a>
-            <hr color="black"><br>
-        </div>
-        
-        <!-- <p>
-            <h3>MEN’S SHOPPING AT MYNTRA: A SUPERIOR EXPERIENCE</h3>
-            Myntra is one of the best sites when it comes to online shopping for men. The finest of material, superior design and unbeatable style go into the making of our men’s shopping collection. Our range of online shopping men’s wear, accessories, footwear and personal care products are second to none. Compared with other men’s shopping sites, Myntra brings you the best price products which won’t hurt your pocket. With seasonal discounts on trendy casual wear, suits, blazers, sneakers and more, online shopping for men at Myntra just gets even more irresistible!</label>
-        </p>
-    
-        <p>
-            <h3>ONLINE SHOPPING FOR MEN: OPTIONS UNLIMITED</h3>
-            At Myntra, our online shopping fashion for men collection features plenty of options to create multiple outfits. At our men’s online shop we have brought together an exhaustive range of products from the best men’s brands. Here is a list of must-haves from the wide variety of awesome products at Myntra: <br><br> &nbsp;
-              1.Opt for a charming yet laid-back look with cool T-shirts and casual shirts worn with stylish jeans, casual trousers or shorts. Stay sharp and sophisticated with our smart options in formal shirts and trousers. Look dapper when meeting your clients in our smooth suits. Put on trendy blazers for formal occasions. On your online men’s clothes’ shopping journey, make sure you include kurtas, jackets and sherwanis from our festive wear collection. Stay warm and comfortable in sweaters and sweatshirts. Get fit and ready for adventure, with our sports and active wear collection.
-              &nbsp;<br><br> 2.Once you are done with your online men’s clothes’ shopping, make sure you pick up the right accessories to complement your look. Whether you are travelling to work or outside the city our wide variety of bags, backpacks and luggage collection will ensure you are well-packed. Our beautiful watches and smart watches work well to enhance your overall style quotient. Reach out for our sunglasses during the summers – let your eyes stay protected while you opt for maximum swag.
-              <br><br> &nbsp;3.Bring impeccable style to your shoe closet with our incredible collection of footwear for men. Look classy during formal and semi-formal occasions with derbies, loafers and oxfords. Stay hip and happening in parties with boat shoes, monks and brogues from our casual men’s footwear range. Lead an active lifestyle with sneakers and running shoes from our sports footwear selection. Pick up sandals, floaters and flip-flops for a trip to the beach. We also host socks in our men’s online shopping collection. That’s basically everything under one roof!
-        </p>
-        <p>
-            <h3>MEN’S SHOPPING MADE EASY AT MYNTRA</h3>
-            Myntra is the most convenient men’s online store, what with our simplified shopping and payment procedures. With just a few clicks of the mouse or taps on your smartphone, you can buy your favorites from the best men’s brands right away.
-        </p> -->
-        <div id="MEN">
-            <h1 class="M1">Mens Top Wear</h1>
-            <div class="M2">
-                <div class="M3">
-                <span> <img src="./images/m1.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>BULLMER</h4> </span>
-                <span><img src="./images/m2.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Jompers</h4></span>
-                <span><img src="./images/m3.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Campus Sutra</h4> </span>
-                <span> <img src="./images/m4.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Appulse</h4> </span>
-                <span><img src="./images/m5.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>The Souled Store</h4> </span>
-                </div>
-                <div class="M4">
-                <span><img src="./images/m6.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>KETCH</h4> </span>
-               <span> <img src="./images/m7.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Tommy Hilfiger</h4> </span>
-                <span><img src="./images/m8.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>New Balance</h4></span>
-                <span><img src="./images/m9.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>VIBEVERSE</h4> </span>
-                <span><img src="./images/m10.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Roadster</h4></span>
-                </div>
-                
-                <div class="M6">
-                <span><img src="./images/m16.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>DENIM</h4> </span>
-               <span> <img src="./images/m17.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>VEIRDO</h4> </span>
-                <span><img src="./images/m18.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>MANQ</h4> </span>
-                <span><img src="./images/m19.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Being Human</h4> </span>
-               <span> <img src="./images/m21.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Innerwear Men</h4> </span>
-                </div>
-                <div class="M7">
-                <span><img src="./images/m22.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>HERE&NOW</h4> </span>
-                <span><img src="./images/m23.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>MAGIC PIN</h4> </span>
-                <span><img src="./images/m24.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>Innerwear Men</h4> </span>
-               <span> <img src="./images/m25.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>KETCH</h4></span>
-                <span><img src="./images/m26.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h4>HERE&NOW</h4> </span>
-                </div>  
-            </div> <hr color="black"> <br><br><br>
-        <div id="women">
-            <div id="Ethnic">
-                <span><img src="./images/w31.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp;<h4>Anouk</h4></span>
-                <span><img src="./images/w13.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp;<h4>DressBerry</h4></span>
-               <span> <img src="./images/w33.jpeg" alt=""> &nbsp; &nbsp; &nbsp; &nbsp;<h4>KAAJH</h4></span>
-                <span><img src="./images/w4.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp;<h4>Rangriti</h4></span>
-                <span><img src="./images/w2.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp;<h4>Burgundy</h4></span>
-                <span><img src="./images/w12.jpeg" alt=""><h4>SASSAFRAS</h4></span>
-             </div>
-             <div id="western">
-                <span><img src="./images/w6.jpeg" alt="" height="260px" width="180px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<h4>LBB</h4></span>
-                <span><img src="./images/w7.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<h4>Anouk</h4></span>
-                <span><img src="./images/w10.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<h4>Coolsters by Pantaloons</h4></span>
-               <span> <img src="./images/w21.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<h4>STREET 9</h4></span>
-               <span> <img src="./images/w24.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<h4>WISSTLER</h4></span>
-               <span> <img src="./images/w20.jpeg" alt="" width="175px"><h4>Antheaa</h4></span>
-            </div>
-        </div> <hr color="black"> <br><br>
-    <div id="kids">
-        <div class="K2">
-            <span class="k12">
-                <img src="./images/k1.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/k2.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/k3.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/k4.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/k5.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            </span>
-        </div>
-        <div class="K4">
-            <span class="k11">
-            <img src="./images/k11.jpeg" alt="" width="210px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/k12.jpeg" alt="" width="190px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/k13.jpeg" alt="" width="190px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/k14.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/k15.jpeg" alt="">
-            </span>
-        </div> <hr color="black"><br><br>
+  <div class="Border">
+    <img src="./images/Myntra.jpeg" class="Img" alt="Myntra Logo" />
+    <a href="#MEN">Men</a>
+    <a href="#women">Women</a>
+    <a href="#kids">Kids</a>
+    <a href="#Furnitures">Furnitures</a>
+    <a href="#beauty">Beauty</a>
+    <input type="text" class="one" placeholder="Search For Products" />
+    <a href="./Profile.html">Profile</a>
+    <a href="">Wishlist</a>
+    <a href="">Bag</a>
+  </div>
+  <hr />
+  <div class="offer">
+    <marquee behavior="alternate" direction="right">
+      <h1>India's Biggest Fashion Sale</h1>
+    </marquee>
+    <a href=""><img src="./images/product2.jpg" alt="Offer banner" /></a>
+  </div>
+  <hr />
+  <div class="Models">
+    <marquee behavior="alternate" direction="right">
+      <img src="./images/p1.jpeg" alt="Model 1" />
+      <img src="./images/p2.jpeg" alt="Model 2" />
+      <img src="./images/p3.webp" alt="Model 3" />
+      <img src="./images/p4.webp" alt="Model 4" />
+      <img src="./images/p5.jpg" alt="Model 5" />
+      <img src="./images/p6.webp" alt="Model 6" />
+      <img src="./images/p7.jpg" alt="Model 7" />
+    </marquee>
+  </div>
+  <hr />
+  <h2>Offer's Zone</h2>
 
-    </div>
-    <div id="Furnitures">
-        <div class="F3">
-            <img src="./images/fr6.jpeg" alt="" width="190px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/fr7.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/fr8.jpeg" alt="" height="250px" width="200px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/fr9.jpeg" alt="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/fr10.jpeg" alt="">
-        </div>
-        <div class="F5">
-            <img src="./images/fr16.jpeg" alt="" width="190px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/fr17.jpeg" alt="" width="190px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/fr18.jpeg" alt="" width="190px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/fr19.jpeg" alt="" width="200px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <img src="./images/fr20.jpeg" alt="">
-        </div>
+  <div>
+    <a href="">
+      <span><img src="./images/f1.jpeg" alt="Offer 1" /></span>
+      <span><img src="./images/f2.jpeg" alt="Offer 2" /></span>
+      <span><img src="./images/f3.jpeg" alt="Offer 3" /></span>
+    </a>
+    <br /><br />
+    <a href="">
+      <span><img src="./images/f4.jpeg" alt="Offer 4" /></span>
+      <span><img src="./images/f5.jpeg" alt="Offer 5" /></span>
+      <span><img src="./images/f6.png" alt="Offer 6" style="height: 225px; width: 225px" /></span>
+    </a>
+    <br /><br />
+    <a href="">
+      <span><img src="./images/f7.webp" alt="Offer 7" style="height: 225px; width: 225px" /></span>
+      <span><img src="./images/f8.jpg" alt="Offer 8" style="height: 225px; width: 225px" /></span>
+      <span><img src="./images/f9.jpeg" alt="Offer 9" /></span>
+    </a>
+  </div>
+  <hr /><br />
 
-    </div><hr color="black"><br><br>
-    <div id="beauty">
-        <div class="B2">
-            <span><img src="./images/l6.jpeg" alt=""><h4>Seven Seas</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <span><img src="./images/l7.jpeg" alt=""><h4>MI FASHION</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <span><img src="./images/l8.jpeg" alt=""><h4>SHRYOAN</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <span><img src="./images/l9.jpeg" alt=""><h4>LOVE EARTH</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <span><img src="./images/l10.jpeg" alt=""><h4>SWISS BEAUTY</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    
-        </div>
-        <div class="B3">
-            <span><img src="./images/l11.jpeg" alt=""><h4>MI FASHION</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <span><img src="./images/l12.jpeg" alt=""><h4>MI FASHION</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <span><img src="./images/l13.jpeg" alt=""><h4>MI FASHION</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <span><img src="./images/l14.jpeg" alt=""><h4>Looks United</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <span><img src="./images/l15.jpeg" alt=""><h4>SWISS BEAUTY</h4></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    
-        </div>
+  <div id="MEN">
+    <h1 class="M1">Mens Top Wear</h1>
+    <div class="M2">
+      <div class="M3">
+        <span>
+          <img src="./images/m1.jpeg" alt="BULLMER" />
+          <h4>BULLMER</h4>
+        </span>
+        <span>
+          <img src="./images/m2.jpeg" alt="Jompers" />
+          <h4>Jompers</h4>
+        </span>
+        <span>
+          <img src="./images/m3.jpeg" alt="Campus Sutra" />
+          <h4>Campus Sutra</h4>
+        </span>
+        <span>
+          <img src="./images/m4.jpeg" alt="Appulse" />
+          <h4>Appulse</h4>
+        </span>
+        <span>
+          <img src="./images/m5.jpeg" alt="The Souled Store" />
+          <h4>The Souled Store</h4>
+        </span>
+      </div>
+      <div class="M4">
+        <span>
+          <img src="./images/m6.jpeg" alt="KETCH" />
+          <h4>KETCH</h4>
+        </span>
+        <span>
+          <img src="./images/m7.jpeg" alt="Tommy Hilfiger" />
+          <h4>Tommy Hilfiger</h4>
+        </span>
+        <span>
+          <img src="./images/m8.jpeg" alt="New Balance" />
+          <h4>New Balance</h4>
+        </span>
+        <span>
+          <img src="./images/m9.jpeg" alt="VIBEVERSE" />
+          <h4>VIBEVERSE</h4>
+        </span>
+        <span>
+          <img src="./images/m10.jpeg" alt="Roadster" />
+          <h4>Roadster</h4>
+        </span>
+      </div>
 
+      <div class="M6">
+        <span>
+          <img src="./images/m16.jpeg" alt="DENIM" />
+          <h4>DENIM</h4>
+        </span>
+        <span>
+          <img src="./images/m17.jpeg" alt="VEIRDO" />
+          <h4>VEIRDO</h4>
+        </span>
+        <span>
+          <img src="./images/m18.jpeg" alt="MANQ" />
+          <h4>MANQ</h4>
+        </span>
+        <span>
+          <img src="./images/m19.jpeg" alt="Being Human" />
+          <h4>Being Human</h4>
+        </span>
+        <span>
+          <img src="./images/m21.jpeg" alt="Innerwear Men" />
+          <h4>Innerwear Men</h4>
+        </span>
+      </div>
+
+      <div class="M7">
+        <span>
+          <img src="./images/m22.jpeg" alt="HERE&NOW" />
+          <h4>HERE&NOW</h4>
+        </span>
+        <span>
+          <img src="./images/m23.jpeg" alt="MAGIC PIN" />
+          <h4>MAGIC PIN</h4>
+        </span>
+        <span>
+          <img src="./images/m24.jpeg" alt="Innerwear Men" />
+          <h4>Innerwear Men</h4>
+        </span>
+        <span>
+          <img src="./images/m25.jpeg" alt="KETCH" />
+          <h4>KETCH</h4>
+        </span>
+        <span>
+          <img src="./images/m26.jpeg" alt="HERE&NOW" />
+          <h4>HERE&NOW</h4>
+        </span>
+      </div>
     </div>
-  
+    <hr />
+    <br /><br /><br />
+  </div>
+
+  <div id="women">
+    <div id="Ethnic">
+      <span>
+        <img src="./images/w31.jpeg" alt="Anouk" />
+        <h4>Anouk</h4>
+      </span>
+      <span>
+        <img src="./images/w13.jpeg" alt="DressBerry" />
+        <h4>DressBerry</h4>
+      </span>
+      <span>
+        <img src="./images/w33.jpeg" alt="KAAJH" />
+        <h4>KAAJH</h4>
+      </span>
+      <span>
+        <img src="./images/w4.jpeg" alt="Rangriti" />
+        <h4>Rangriti</h4>
+      </span>
+      <span>
+        <img src="./images/w2.jpeg" alt="Burgundy" />
+        <h4>Burgundy</h4>
+      </span>
+      <span>
+        <img src="./images/w12.jpeg" alt="SASSAFRAS" />
+        <h4>SASSAFRAS</h4>
+      </span>
+    </div>
+    <div id="western">
+      <span>
+        <img src="./images/w6.jpeg" alt="LBB" style="height:260px; width:180px" />
+        <h4>LBB</h4>
+      </span>
+      <span>
+        <img src="./images/w7.jpeg" alt="Anouk" />
+        <h4>Anouk</h4>
+      </span>
+      <span>
+        <img src="./images/w10.jpeg" alt="Coolsters by Pantaloons" />
+        <h4>Coolsters by Pantaloons</h4>
+      </span>
+      <span>
+        <img src="./images/w21.jpeg" alt="STREET 9" />
+        <h4>STREET 9</h4>
+      </span>
+      <span>
+        <img src="./images/w24.jpeg" alt="WISSTLER" />
+        <h4>WISSTLER</h4>
+      </span>
+      <span>
+        <img src="./images/w20.jpeg" alt="Antheaa" style="width:175px" />
+        <h4>Antheaa</h4>
+      </span>
+    </div>
+  </div>
+  <hr />
+  <br /><br />
+  <div id="kids">
+    <div class="K2">
+      <span class="k12">
+        <img src="./images/k1.jpeg" alt="Kid 1" />
+        <img src="./images/k2.jpeg" alt="Kid 2" />
+        <img src="./images/k3.jpeg" alt="Kid 3" />
+        <img src="./images/k4.jpeg" alt="Kid 4" />
+        <img src="./images/k5.jpeg" alt="Kid 5" />
+      </span>
+    </div>
+    <div class="K4">
+      <span class="k11">
+        <img src="./images/k11.jpeg" alt="Kid 11" style="width:210px" />
+        <img src="./images/k12.jpeg" alt="Kid 12" style="width:190px" />
+        <img src="./images/k13.jpeg" alt="Kid 13" style="width:190px" />
+        <img src="./images/k14.jpeg" alt="Kid 14" />
+        <img src="./images/k15.jpeg" alt="Kid 15" />
+      </span>
+    </div>
+    <hr />
+    <br /><br />
+  </div>
+  <div id="Furnitures">
+    <div class="F3">
+      <img src="./images/fr6.jpeg" alt="Furniture 1" style="width:120px" />
+      <img src="./images/fr7.jpeg" alt="Furniture 2" style="width:120px" />
+      <img src="./images/fr8.jpeg" alt="Furniture 3" style="width:120px; height: 250px" />
+      <img src="./images/fr9.jpeg" alt="Furniture 4" style="width:120px" />
+      <img src="./images/fr10.jpeg" alt="Furniture 5" style="width:120px" />
+    </div>
+    <div class="F5">
+      <img src="./images/fr16.jpeg" alt="Furniture 6" style="width:120px" />
+      <img src="./images/fr17.jpeg" alt="Furniture 7" style="width:120px" />
+      <img src="./images/fr18.jpeg" alt="Furniture 8" style="width:120px" />
+      <img src="./images/fr19.jpeg" alt="Furniture 9" style="width:120px" />
+      <img src="./images/fr20.jpeg" alt="Furniture 10" style="width:120px" />
+    </div>
+  </div>
+  <hr />
+  <br /><br />
+  <div id="beauty">
+    <div class="B2">
+      <span><img src="./images/l6.jpeg" alt="Seven Seas" /><h4>Seven Seas</h4></span>
+      <span><img src="./images/l7.jpeg" alt="MI FASHION" /><h4>MI FASHION</h4></span>
+      <span><img src="./images/l8.jpeg" alt="SHRYOAN" /><h4>SHRYOAN</h4></span>
+      <span><img src="./images/l9.jpeg" alt="LOVE EARTH" /><h4>LOVE EARTH</h4></span>
+      <span><img src="./images/l10.jpeg" alt="SWISS BEAUTY" /><h4>SWISS BEAUTY</h4></span>
+    </div>
+    <div class="B3">
+      <span><img src="./images/l11.jpeg" alt="MI FASHION" /><h4>MI FASHION</h4></span>
+      <span><img src="./images/l12.jpeg" alt="MI FASHION" /><h4>MI FASHION</h4></span>
+      <span><img src="./images/l13.jpeg" alt="MI FASHION" /><h4>MI FASHION</h4></span>
+      <span><img src="./images/l14.jpeg" alt="Looks United" /><h4>Looks United</h4></span>
+      <span><img src="./images/l15.jpeg" alt="SWISS BEAUTY" /><h4>SWISS BEAUTY</h4></span>
+    </div>
+  </div>
 </body>
 </html>
