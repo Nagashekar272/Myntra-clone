@@ -1,0 +1,345 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.welcome-modal {
+  display: flex;
+  background: white;
+  width: 100%;
+  max-width: 860px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
+  max-height: 90vh;
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: white;
+  border: none;
+  color: #94969f;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.2s;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.close-btn:hover {
+  color: var(--primary-color);
+  transform: rotate(90deg);
+}
+
+.modal-left {
+  flex: 1;
+  background: linear-gradient(135deg, #fff0f3 0%, #ffe5ed 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-image-container {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  position: relative;
+}
+
+.main-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.welcome-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 30px;
+  background: linear-gradient(to top, rgba(255,240,243,1) 40%, transparent);
+  text-align: center;
+}
+
+.welcome-text h3 {
+  font-size: 26px;
+  color: #282c3f;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.welcome-text p {
+  color: #535766;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.modal-right {
+  flex: 1.2;
+  background: white;
+  overflow: hidden;
+}
+
+.form-scroll-container {
+  height: 100%;
+  padding: 48px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  margin-bottom: 32px;
+}
+
+.form-header h2 {
+  font-size: 28px;
+  color: #282c3f;
+  margin-bottom: 8px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #7e818c;
+  font-size: 15px;
+}
+
+.modal-input-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal-input-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #282c3f;
+  margin-bottom: 10px;
+}
+
+.modal-input-group label svg {
+  color: var(--primary-color);
+}
+
+.modal-input-group input,
+.modal-input-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #f0f0f0;
+  border-radius: 14px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  color: #282c3f;
+  box-sizing: border-box;
+}
+
+.modal-input-group input:focus,
+.modal-input-group select:focus {
+  border-color: var(--primary-color);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 63, 108, 0.1);
+}
+
+.modal-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.modal-row .modal-input-group {
+  flex: 1;
+}
+
+/* Category Selection */
+.category-selection-section {
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+
+.section-label {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: #282c3f;
+  margin-bottom: 18px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.category-card {
+  border: 2px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-wrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.kids-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #fff0f3;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.category-card span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #535766;
+}
+
+.category-card:hover {
+  border-color: #d0d0d0;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.category-card:hover img {
+  transform: scale(1.1);
+}
+
+.category-card.selected {
+  border-color: var(--primary-color);
+  background: rgba(255, 63, 108, 0.03);
+  box-shadow: 0 10px 20px rgba(255, 63, 108, 0.1);
+}
+
+.category-card.selected span {
+  color: var(--primary-color);
+}
+
+.modal-actions {
+  margin-top: auto;
+}
+
+.save-profile-btn {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  box-shadow: 0 12px 24px rgba(255, 63, 108, 0.25);
+}
+
+.save-profile-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 63, 108, 0.35);
+}
+
+.skip-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #94969f;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.skip-text:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-pop-in {
+  animation: popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (max-width: 860px) {
+  .welcome-modal {
+    flex-direction: column;
+    max-width: 450px;
+    max-height: 85vh;
+  }
+  
+  .modal-left {
+    height: 200px;
+    flex: none;
+  }
+  
+  .welcome-text {
+    padding: 20px;
+  }
+  
+  .welcome-text h3 { font-size: 20px; }
+  .welcome-text p { font-size: 13px; }
+  
+  .modal-right {
+    flex: 1;
+  }
+  
+  .form-scroll-container {
+    padding: 30px;
+  }
+}

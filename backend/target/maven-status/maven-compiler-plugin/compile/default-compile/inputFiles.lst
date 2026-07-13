@@ -1,0 +1,12 @@
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\BackendApplication.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\component\DataInitializer.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\config\WebConfig.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\controller\ProductController.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\controller\UserController.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\model\Order.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\model\OrderItem.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\model\Product.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\model\User.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\repository\OrderRepository.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\repository\ProductRepository.java
+E:\Myntra-clone\backend\src\main\java\com\myntra\backend\repository\UserRepository.java

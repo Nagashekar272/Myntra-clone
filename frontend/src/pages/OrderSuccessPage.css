@@ -1,0 +1,117 @@
+.success-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  padding: 40px;
+  background: #f8f9fb;
+}
+
+.success-card {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.success-icon-wrapper {
+  width: 100px;
+  height: 100px;
+  background: #03a685;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  box-shadow: 0 10px 25px rgba(3, 166, 133, 0.3);
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.success-card h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #282c3f;
+  margin-bottom: 15px;
+}
+
+.order-number {
+  font-size: 16px;
+  color: #7e818c;
+  margin-bottom: 30px;
+}
+
+.success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #f0fcf9;
+  padding: 16px;
+  border-radius: 12px;
+  color: #03a685;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.track-order-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+.track-order-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 63, 108, 0.2);
+}
+
+.back-home-btn {
+  width: 100%;
+  padding: 16px;
+  background: white;
+  border: 2px solid #f0f0f5;
+  color: #282c3f;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.back-home-btn:hover {
+  background: #f8f9fb;
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 0.9; transform: scale(1.1); }
+  80% { opacity: 1; transform: scale(0.89); }
+  100% { opacity: 1; transform: scale(1); }
+}

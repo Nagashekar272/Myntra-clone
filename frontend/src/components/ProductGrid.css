@@ -1,0 +1,191 @@
+.product-section {
+  padding: 40px 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: rgba(255, 63, 108, 0.1);
+}
+
+.product-image-container {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  position: relative;
+  background: #f8f9fa;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 5;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.1);
+  background: var(--primary-light);
+}
+
+.wishlist-btn.active {
+  background: var(--primary-light);
+}
+
+.product-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(255,255,255,1) 30%, rgba(255,255,255,0.8) 100%);
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.product-card:hover .product-overlay {
+  transform: translateY(0);
+}
+
+.card-sizes {
+  font-size: 12px;
+  font-weight: 700;
+  color: #535766;
+  margin-bottom: 12px;
+}
+
+.add-to-bag-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(255, 63, 108, 0.2);
+}
+
+.add-to-bag-btn:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 6px 15px rgba(255, 63, 108, 0.3);
+}
+
+.product-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.product-brand {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #282c3f;
+  margin-bottom: 4px;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #7e818c;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.current-price {
+  font-weight: 800;
+  color: #282c3f;
+}
+
+.original-price {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #94969f;
+}
+
+.discount {
+  font-size: 12px;
+  color: #ff905a;
+  font-weight: 700;
+}
+
+.admin-actions {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.admin-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.admin-btn.edit { background: #4a90e2; }
+.admin-btn.delete { background: #e74c3c; }
+
+/* States */
+.loading-state, .error-state {
+  padding: 100px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #7e818c;
+  font-weight: 600;
+}
