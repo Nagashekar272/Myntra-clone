@@ -1,0 +1,133 @@
+.map-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.map-modal-content {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  height: 600px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.map-modal-header {
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.map-modal-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-search-bar {
+  padding: 15px 25px;
+  background: white;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.map-search-bar form {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f6;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+.map-search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.map-search-bar button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.map-container-wrapper {
+  flex: 1;
+  background: #f5f5f6;
+}
+
+.map-modal-footer {
+  padding: 20px 25px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selected-address-info strong {
+  display: block;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.selected-address-info p {
+  font-size: 13px;
+  color: var(--light-text);
+  margin-top: 2px;
+}
+
+.confirm-location-btn {
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.confirm-location-btn:hover {
+  background-color: var(--primary-dark);
+}
